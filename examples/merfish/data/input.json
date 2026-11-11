@@ -1,0 +1,45 @@
+{
+  "training_shape": [
+    2027,
+    3225
+  ],
+  "training_groups": [
+    "H16.03.004",
+    "H16.06.002",
+    "H16.06.008",
+    "H16.06.009",
+    "H16.24.010",
+    "H200.1030"
+  ],
+  "class_labels": [
+    "EXC",
+    "INC",
+    "lASC",
+    "lMGC",
+    "lOGC",
+    "lOPC"
+  ],
+  "normalization_universe_genes": 50281,
+  "measurement_donors": [
+    "H18.06.006",
+    "H19.30.001",
+    "H20.30.001",
+    "H22.26.401"
+  ],
+  "measurement_cell_counts": [
+    9528,
+    9522,
+    13185,
+    7045
+  ],
+  "candidate_genes_before_gate": 3225,
+  "candidate_genes_after_gate": 3224,
+  "measurement_exclusions": [
+    "MALAT1"
+  ],
+  "sha256": {
+    "library-totals.npy": "2efbf433d312931e330bdc4faaddcd7815e9d63902f30ced83bb4ad93e9543f9",
+    "measurement-counts.npz": "ed346a695fb2e123bb476bd98ee5888fd8ec811337994f47010ede5ecf75a6e4",
+    "training-counts.npz": "e4f65c814f1704dce90d28830bf147c8b2b55e6e6ef67757506f58fd4c916bfa"
+  }
+}

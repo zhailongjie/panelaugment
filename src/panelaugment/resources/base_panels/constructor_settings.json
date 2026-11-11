@@ -1,0 +1,45 @@
+{
+  "reconst": {
+    "label": "ReconST",
+    "role": "Base construction",
+    "recipe": "Native gated autoencoder; use the fixed epoch-20 gate ranking, with stable positive-gate ordering, for all requested panel sizes. No development/test checkpoint selection.",
+    "parameters": {
+      "hidden": 200,
+      "dropout": 0.05,
+      "lk": 0.3,
+      "epochs": 20,
+      "learning_rate": 0.001,
+      "weight_decay": 1e-05,
+      "l_lambda": 0.0001,
+      "batch_size": 256,
+      "seed": 2026
+    },
+    "design_roles": {
+      "dlpfc": "One reference-training donor for gradients and one for loss monitoring.",
+      "caudate": "Three separate base-design donors for gradients and one for loss monitoring.",
+      "merfish": "1,630 gradient and 397 loss-monitor cells within the six reference-training donors."
+    },
+    "monitoring": "Loss monitoring does not choose the stopping epoch."
+  },
+  "spapros": {
+    "label": "Spapros",
+    "role": "Base construction",
+    "recipe": "Independent cold ProbesetSelector selection for each size, with no preselected genes.",
+    "parameters": {
+      "n": "requested panel size",
+      "n_pca_genes": "max(100, ceil(1.25 * n))",
+      "seed_requested": 2026,
+      "seed_effective": 0,
+      "n_jobs": 4
+    }
+  },
+  "wilcoxon": {
+    "label": "Wilcoxon ranking",
+    "role": "Base construction, distinct from the Marker augmentation comparator",
+    "recipe": "Pooled-cell one-versus-rest rank-sum z statistics with average ranks, tie correction and no continuity correction. Zero corrected variance gives zero score. For each class, rank positive scores descending with stable ties. Cycle sorted classes and take the next unused positive-scoring gene until n distinct genes are retained.",
+    "donor_weighting": false,
+    "seed": null,
+    "tie_breaking": "Frozen candidate order"
+  },
+  "scope": "Construction parameters for the numbered benchmark base panels."
+}

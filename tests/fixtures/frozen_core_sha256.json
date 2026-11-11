@@ -1,0 +1,8 @@
+{
+  "golden_fixture": {
+    "sha256": "e50a9a9c3267c8417345c26ae3112e89831887bba1055b3165e829bf6cbadcb1"
+  },
+  "upstream": {
+    "sha256": "5a0c3a13aee42f815bc1bb0ba0914d3346eb6d76f6368f15b6c1b95f2709d9b2"
+  }
+}
