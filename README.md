@@ -4,7 +4,7 @@
 
 PanelAugment selects additional genes from annotated reference expression, given a fixed, ordered base panel and an addition budget. It accounts for the genes already selected and adds candidates by their conditional gain in class separation, using donor-aware training statistics.
 
-[中文](README.zh-CN.md) · [Quick start](#quick-start) · [MERFISH example](#a-real-example-500--510-genes) · [Base panels and data](#base-panels-and-original-data) · [Documentation](#documentation)
+[中文](README.zh-CN.md) · [Source data and archive](#source-data-and-software-archive) · [Quick start](#quick-start) · [MERFISH example](#a-real-example-500--510-genes) · [Base panels and data](#base-panels-and-original-data) · [Documentation](#documentation)
 
 ## Overview
 
@@ -13,6 +13,11 @@ PanelAugment selects additional genes from annotated reference expression, given
 **Figure 1.** PA retains the ordered base panel, scores each candidate conditional on the current selection, and repeats for the requested addition budget. Panels a–c describe the method; panels d–f illustrate downstream analyses using human caudate data (BP-11010510, 140 + 20 genes), with spatially refitted classification in e,f. [Full-size PNG](docs/assets/pa-overview.png) · [SVG](docs/assets/pa-overview.svg) · [PDF](docs/assets/pa-overview.pdf).
 
 The toolkit includes a Python API, command-line tools, PA preprocessing with integrated measurement-consistency gating, and **24 numbered base panels across three datasets**.
+
+## Source data and software archive
+
+- **Manuscript source data:** [Download ZIP (85.4 MB)](https://github.com/zhailongjie/panelaugment/releases/download/source-data-2026-11-14/panelaugment-source-data-2026-11-14.zip) · [Release page](https://github.com/zhailongjie/panelaugment/releases/tag/source-data-2026-11-14) · [SHA256](https://github.com/zhailongjie/panelaugment/releases/download/source-data-2026-11-14/panelaugment-source-data-2026-11-14.zip.sha256). Includes the complete benchmark comparisons, figure source data, ordered gene panels and timing records.
+- **Software and test data:** [Software Heritage archive](https://archive.softwareheritage.org/swh:1:rev:be6d889279b7b7b6fc7b4517053e8f1f1a680d31). Fixed manuscript software version **0.2.0**, including the real MERFISH example inputs and expected output.
 
 ## Quick start
 

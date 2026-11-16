@@ -4,7 +4,7 @@
 
 PanelAugment 以带注释的参考表达数据、有序基础面板和扩增预算为输入。它基于考虑供体差异的训练统计量，在每一步计算候选基因相对于已选基因的条件判别增益，依次扩增面板。
 
-[English](README.md) · [快速开始](#快速开始) · [MERFISH 实例](#真实实例从-500-到-510-个基因) · [基础面板与原始数据](#基础面板与原始数据) · [文档导航](#文档导航)
+[English](README.md) · [源数据与归档](#源数据与长期归档) · [快速开始](#快速开始) · [MERFISH 实例](#真实实例从-500-到-510-个基因) · [基础面板与原始数据](#基础面板与原始数据) · [文档导航](#文档导航)
 
 ## 方法总览
 
@@ -13,6 +13,11 @@ PanelAugment 以带注释的参考表达数据、有序基础面板和扩增预�
 **图 1。** PA 保留有序基础面板，计算各候选基因相对于当前面板的条件增益，并重复选择直到达到新增预算。a–c 展示方法；d–f 展示人尾状核实例（BP-11010510，140＋20 个基因），其中 e、f 的分类模型在空间数据上重新拟合。[高清 PNG](docs/assets/pa-overview.png) · [SVG](docs/assets/pa-overview.svg) · [PDF](docs/assets/pa-overview.pdf)。
 
 工具包包含 Python API、命令行工具、集成测量一致性门控的 PA 数据预处理，以及**三个数据集的 24 个编号基础面板**。
+
+## 源数据与长期归档
+
+- **论文源数据：**[下载 ZIP（85.4 MB）](https://github.com/zhailongjie/panelaugment/releases/download/source-data-2026-11-14/panelaugment-source-data-2026-11-14.zip) · [版本页面](https://github.com/zhailongjie/panelaugment/releases/tag/source-data-2026-11-14) · [SHA256 校验文件](https://github.com/zhailongjie/panelaugment/releases/download/source-data-2026-11-14/panelaugment-source-data-2026-11-14.zip.sha256)。包含完整基准比较、图表源数据、有序基因面板和运行时间记录。
+- **软件与测试数据：**[Software Heritage 长期归档](https://archive.softwareheritage.org/swh:1:rev:be6d889279b7b7b6fc7b4517053e8f1f1a680d31)。对应论文使用的软件 **0.2.0** 固定版本，包含真实 MERFISH 示例的输入和预期输出。
 
 ## 快速开始
 
